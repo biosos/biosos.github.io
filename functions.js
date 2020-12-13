@@ -34,21 +34,21 @@ if (Notification.permission !== 'denied') {  Notification.requestPermission(func
 		
 		case 1:
 		zeitms = 1500
-		ausgabe="Fenster öffnen!"
-		if (erlaubt){var notification = new Notification("Lüften")};
+		ausgabe="Fenster Ã¶ffnen!"
+		if (erlaubt){var notification = new Notification(" ",{body:" LÃ¼ften \n \n"  })};
 		zustand = 2
 		break;
 		
 		case 2:
-		zeitms = 6000*5*offset
+		zeitms = 6000*5
 		ausgabe="Fenster offen!"
 		zustand = 3
 		break;
 		
 		case 3:
 		zeitms = 1500
-		ausgabe="Fenster schließen"
-		if (erlaubt){var notification = new Notification("Fenster schließen")};
+		ausgabe="Fenster schlieÃŸen"
+		if (erlaubt){var notification = new Notification(" ",{body:" Fenster schlieÃŸen \n \n"  }};
 		zustand = 0
 		break;
 	}
